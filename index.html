@@ -8,6 +8,17 @@
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ZrR3kRmdF5KYGtnvI",
+      });
+   })();
+</script>
 </head>
 <body>
     <!-- header design  -->
@@ -54,7 +65,7 @@
     <div class="home-sci">
         <a href="#"><i class='bx bxl-facebook' ></i></a>
         <a href="#"><i class='bx bxl-instagram' ></i></a>
-        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+        <a href="https://www.linkedin.com/in/ravi-jain-207192226/" target="_blank"><i class='bx bxl-linkedin'></i></a>
         <span class="animate" style="--i:6;"></span>
 
     </div>
@@ -244,34 +255,34 @@
     <!-- Contact section design  -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
+        <form class = "form" action="#" >
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Full Name"  id='name' required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" placeholder="Email Address"  id='email'required>
                     <span class="focus"></span>
                 </div>
             </div>
 
-            <div class="input-box">
-                <div class="input-field">
+            <!-- <div class="input-box">
+                 <div class="input-field">
                     <input type="number" placeholder="Mobile Number" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
                     <input type="text" placeholder="Email Subject" required>
                     <span class="focus"></span>
-                </div>
-            </div>
+                </div> -->
+            </div> 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name=""  cols="30" rows="10" placeholder="Your Message" id="message" required></textarea>
                 <span class="focus"></span>
             </div>
             <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" onclick="sendMail()" class="btn">Submit</button>
             </div>
         </form>
     </section>
